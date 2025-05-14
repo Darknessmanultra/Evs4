@@ -1,0 +1,6 @@
+@EVS4_HostAddress = http://localhost:5198
+
+GET {{EVS4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

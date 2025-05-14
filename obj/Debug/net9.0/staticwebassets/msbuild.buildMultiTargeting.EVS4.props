@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EVS4.props" />
+</Project>
