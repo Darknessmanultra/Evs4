@@ -11,7 +11,8 @@ builder.Services.AddDbContext<ApiDbContext>(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
-var key = "Proton_Enhaced_Neutron_Induced_Spectroscopy";
+var jwtSecret = builder.Configuration["JwtSettings:Secret"];
+var key = Encoding.UTF8.GetBytes(jwtSecret);
 
 builder.Services.AddAuthentication(options =>
 {
@@ -26,7 +27,7 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = false,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+        IssuerSigningKey = new SymmetricSecurityKey(key)
     };
 });
 

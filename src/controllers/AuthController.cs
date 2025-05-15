@@ -14,11 +14,17 @@ namespace EVS4.src.controllers
     [Route("auth")]
     public class AuthController : ControllerBase
     {
+        private readonly IConfiguration _config;
+
+        public AuthController(IConfiguration config)
+        {
+            _config = config;
+        }
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes("Proton_Enhaced_Neutron_Induced_Spectroscopy");
+            var key = Encoding.UTF8.GetBytes(_config["JwtSettings:Secret"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[]

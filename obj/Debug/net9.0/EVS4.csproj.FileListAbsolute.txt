@@ -165,3 +165,4 @@ D:\s\primer semestre 2025\arqu. sis\Ev_Sum4\EVS4\bin\Debug\net9.0\Swashbuckle.As
 D:\s\primer semestre 2025\arqu. sis\Ev_Sum4\EVS4\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\s\primer semestre 2025\arqu. sis\Ev_Sum4\EVS4\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\s\primer semestre 2025\arqu. sis\Ev_Sum4\EVS4\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\s\primer semestre 2025\arqu. sis\Ev_Sum4\EVS4\obj\Debug\net9.0\EVS4.sourcelink.json
